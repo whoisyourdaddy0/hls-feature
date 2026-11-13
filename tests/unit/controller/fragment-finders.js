@@ -6,6 +6,7 @@ import {
 } from '../../../src/controller/fragment-finders';
 import { mockFragments } from '../../mocks/data';
 import BinarySearch from '../../../src/utils/binary-search';
+import sinon from 'sinon';
 
 describe('Fragment finders', function () {
   const sandbox = sinon.createSandbox();

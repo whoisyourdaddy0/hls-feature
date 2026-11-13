@@ -1,4 +1,5 @@
 import AbrController from './controller/abr-controller';
+import type { HybridAbrConfig } from './controller/hybrid-abr-controller';
 import AudioStreamController from './controller/audio-stream-controller';
 import AudioTrackController from './controller/audio-track-controller';
 import { SubtitleStreamController } from './controller/subtitle-stream-controller';
@@ -296,6 +297,11 @@ export type HlsConfig = {
   useMediaCapabilities: boolean;
 
   abrController: typeof AbrController;
+  /**
+   * Optional tuning for HybridAbrController. Ignored by the default
+   * AbrController, so the default ABR behavior is unchanged.
+   */
+  hybridAbr?: Partial<HybridAbrConfig>;
   bufferController: typeof BufferController;
   capLevelController: typeof CapLevelController;
   errorController: typeof ErrorController;

@@ -1,7 +1,9 @@
+import './setup-globals';
 import 'promise-polyfill/src/polyfill';
 import './unit/hls';
 import './unit/events';
 import './unit/controller/abr-controller';
+import './unit/controller/hybrid-abr-controller';
 import './unit/controller/audio-stream-controller';
 import './unit/controller/audio-track-controller';
 import './unit/controller/base-stream-controller';
